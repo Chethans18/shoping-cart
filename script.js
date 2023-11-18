@@ -21,6 +21,7 @@ function addItemsToList() {
     newItem.appendChild(deleteButton)
 
     span.textContent = inputItem;
+
     deleteButton.innerText = 'delet';
 
     deleteButton.addEventListener('click', function () {
