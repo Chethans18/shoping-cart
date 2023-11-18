@@ -2,7 +2,7 @@ let inputText = document.querySelector('#item');
 let addItem = document.querySelector('#add-item');
 let itemList = document.querySelector("#item-list")
 
-
+addItem.addEventListener('click', addItemsToList);
 
 function addItemsToList() {
     //store the inputvalue
@@ -30,4 +30,3 @@ function addItemsToList() {
     inputText.focus();
 
 }
-addItem.addEventListener('click', addItemsToList);
