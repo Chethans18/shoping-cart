@@ -1,19 +1,18 @@
-let item = document.querySelector('#item');
+let inputText = document.querySelector('#item');
 let addItem = document.querySelector('#add-item');
 let itemList = document.querySelector("#item-list")
 
-addItem.addEventListener('click', addItemsToList);
+
 
 function addItemsToList() {
     //store the inputvalue
-    let inputItem = item.value;
+    let inputItem = inputText.value;
 
     // clear the input value
-    item.value = "";
+    inputText.value = "";
 
     //creates list and append into ul
     let newItem = document.createElement('li')
-    newItem.setAttribute("id", "list")
     itemList.appendChild(newItem);
     //create span and button and append into list
     let span = document.createElement('span');
@@ -27,5 +26,8 @@ function addItemsToList() {
     deleteButton.addEventListener('click', function () {
         itemList.removeChild(newItem);
     });
+    //makes input ready for next input
+    inputText.focus();
 
 }
+addItem.addEventListener('click', addItemsToList);
